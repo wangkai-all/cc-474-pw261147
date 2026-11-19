@@ -1,0 +1,21 @@
+{
+  "name": "timevault",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "支持时间旅行的数据表分区管理工具：按时间点/版本恢复、差异与下游影响分析、并发冲突保护、审计追溯",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "start": "node server/start.js",
+    "dev": "node --watch server/start.js",
+    "seed": "node server/seed-cli.js",
+    "seed:reset": "node server/seed-cli.js --force",
+    "test": "node --test test/api.test.js",
+    "test:e2e": "node --test test/e2e.test.js"
+  },
+  "devDependencies": {
+    "playwright-core": "^1.58.2"
+  }
+}

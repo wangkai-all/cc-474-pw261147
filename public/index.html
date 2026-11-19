@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TimeVault · 数据表时间旅行</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⏳</text></svg>" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#/">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="16" cy="16" r="12.5" />
+            <path d="M16 8.5v7.8l5.2 3.1" stroke-linecap="round" />
+            <path d="M6.5 16a9.5 9.5 0 0 1 2-5.9" stroke-linecap="round" opacity=".55" />
+          </svg>
+        </span>
+        <span>
+          <strong>TimeVault</strong>
+          <small>数据表时间旅行</small>
+        </span>
+      </a>
+      <nav class="topnav" id="topnav">
+        <a href="#/" data-nav="tables">数据表</a>
+        <a href="#/jobs" data-nav="jobs">恢复任务</a>
+        <a href="#/audit" data-nav="audit">审计</a>
+      </nav>
+      <div class="topbar-right">
+        <button class="btn btn-ghost" id="btn-demo" title="重建演示数据（会清空现有恢复记录）">重置演示数据</button>
+        <span class="pill" id="health-pill"><span class="dot"></span><span>连接中</span></span>
+      </div>
+    </header>
+
+    <main id="app" class="app" aria-live="polite"></main>
+
+    <div id="toast-stack" class="toast-stack" aria-live="assertive"></div>
+    <div id="modal-root"></div>
+
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>
